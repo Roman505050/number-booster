@@ -78,7 +78,7 @@ jobs:
       - name: Run Unit Tests with Coverage
         run: |
           mkdir -p coverage
-          poetry run coverage run -m pytest -v tests/unit/
+          poetry run coverage run -m pytest -v tests/
         env:
           COVERAGE_FILE: coverage/.coverage.unit.${{ runner.os }}-py${{ matrix.python-version }}
           CONTEXT: unit.${{ runner.os }}-py${{ matrix.python-version }}
