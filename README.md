@@ -1,6 +1,6 @@
 <p align="center">
 <a href="https://github.com/Roman505050/number-booster/actions?query=workflow%3ATest+event%3Apush+branch%3Amaster" target="_blank">
-    <img src="https://github.com/Roman505050/number-booster/actions/workflows/test.yml/badge.svg?event=push&branch=master" alt="Test">
+    <img src="https://github.com/Roman505050/number-booster/actions/workflows/test.yaml/badge.svg?event=push&branch=master" alt="Test">
 </a>
 <a href="https://pypi.org/project/number-booster" target="_blank">
     <img src="https://img.shields.io/pypi/v/number-booster?color=%2334D058&label=pypi%20package" alt="Package version">
