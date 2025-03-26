@@ -73,9 +73,9 @@ boosted_value = booster.boost(original_value)  # Returns a random value between 
 
 ```python
 from number_booster import RandomBoosterStrategy
-from web3 import Web3
+from web3 import Web3, HTTPProvider
 
-w3 = Web3(Web3.HTTPProvider('http://localhost:8545'))
+w3 = Web3(HTTPProvider('http://localhost:8545'))
 
 # Initialize booster for gas price
 gas_booster = RandomBoosterStrategy(multiplier_min=1.1, multiplier_max=1.3)
