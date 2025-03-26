@@ -1,0 +1,56 @@
+[project]
+name = "number-booster"
+version = "0.1.0"
+description = "A flexible Python library for boosting numeric values using the Strategy pattern. Designed for blockchain transactions to flexibly increase gas and gasPrice."
+authors = [
+    {name = "Roman505050",email = "myhun59@gmail.com"}
+]
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.9"
+dependencies = []
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^4.1.0"
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.3.5"
+coverage = "^7.7.0"
+
+[tool.poetry.group.lint.dependencies]
+flake8 = "^7.1.2"
+mypy = "^1.15.0"
+isort = "^6.0.1"
+black = "^25.1.0"
+flake8-comprehensions = "^3.16.0"
+flake8-mutable = "^1.2.0"
+flake8-bugbear = "^24.12.12"
+
+[tool.pytest.ini_options]
+testpaths = "tests"
+markers = [
+    "common: Common tests for all booster strategies",
+    "random_booster: Tests specific to RandomBoosterStrategy",
+    "fixed_booster: Tests specific to FixedBoosterStrategy"
+]
+
+[tool.mypy]
+strict = true
+warn_return_any = true
+warn_unused_configs = true
+explicit_package_bases = true
+check_untyped_defs = true
+follow_untyped_imports = true
+
+[tool.black]
+line-length = 79
+
+[tool.isort]
+profile = "black"
+include_trailing_comma = true
+lines_after_imports = 2
+line_length = 79
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
